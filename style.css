@@ -1,289 +1,228 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth;
+/* ---------- GLOBAL ---------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
-body {
-  background: #0f172a;
-  color: white;
-  line-height: 1.6;
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-  background: #020617;
-  position: sticky;
-  top: 0;
+a{
+text-decoration:none;
+color:inherit;
 }
 
-nav h1 {
-  color: #38bdf8;
+section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
+h2{
+margin-bottom:25px;
+color:#38bdf8;
+text-align:center;
 }
 
-nav ul li {
-  margin-left: 25px;
-}
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-section {
-  padding: 80px 10%;
-}
-
-.hero {
-  text-align: center;
-  padding-top: 120px;
-}
-
-.hero h2 {
-  font-size: 40px;
-  color: #38bdf8;
-}
-
-.hero p {
-  margin-top: 15px;
-  font-size: 18px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 10px 25px;
-  background: #38bdf8;
-  color: black;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.about {
-  background: #020617;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.project-card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.project-card h3 {
-  color: #38bdf8;
-}
-
-.social {
-  margin-top: 20px;
-}
-
-.social a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: #38bdf8;
-  font-weight: bold;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-}
-
-form input,
-form textarea {
-  margin-top: 10px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-}
-
-form button {
-  margin-top: 15px;
-  padding: 10px;
-  background: #38bdf8;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-footer {
-  background: #020617;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.service-card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.service-card h3 {
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
-.availability {
-  margin-top: 15px;
-  font-size: 16px;
-  color: #cbd5f5;
-}
-.blogs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.blog-card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.blog-card:hover {
-  transform: translateY(-5px);
-}
-
-.blog-card h3 {
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
-.skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.skill-card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 8px;
-}
-.education-card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-.learning-card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-nav ul li a.active {
-  color: #38bdf8;
-}
-
-.project-card,
-.service-card,
-.blog-card,
-.skill-card {
-  transition: transform 0.3s ease;
-  transform-style: preserve-3d;
-}
-/* ---------- MOBILE RESPONSIVE DESIGN ---------- */
-
-@media (max-width: 768px){
+/* ---------- NAVBAR ---------- */
 
 nav{
-flex-direction:column;
-align-items:flex-start;
-padding:15px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:#020617;
+flex-wrap:wrap;
+}
+
+nav h1{
+color:#38bdf8;
+font-size:22px;
 }
 
 nav ul{
-flex-direction:column;
-width:100%;
-margin-top:10px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+list-style:none;
 }
 
-nav ul li{
-margin:10px 0;
+nav ul li a{
+font-size:14px;
+font-weight:bold;
 }
+
+
+/* ---------- HERO ---------- */
 
 .hero{
-padding-top:80px;
+text-align:center;
+padding:80px 20px;
 }
 
 .hero h2{
-font-size:28px;
+font-size:30px;
+margin-bottom:10px;
 }
 
 .hero p{
 font-size:16px;
-padding:0 10px;
+margin-bottom:20px;
+color:#cbd5f5;
 }
 
-section{
-padding:60px 6%;
+.btn{
+display:inline-block;
+background:#38bdf8;
+color:black;
+padding:10px 22px;
+border-radius:6px;
+font-weight:bold;
+margin-top:10px;
 }
+
+
+/* ---------- GRID SECTIONS ---------- */
 
 .projects,
 .services,
 .skills,
 .blogs{
+display:grid;
 grid-template-columns:1fr;
+gap:20px;
 }
+
+
+/* ---------- CARDS ---------- */
 
 .project-card,
 .service-card,
 .skill-card,
-.blog-card{
-width:100%;
+.blog-card,
+.education-card,
+.learning-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
 }
 
-form{
-width:100%;
+.project-card:hover,
+.service-card:hover,
+.skill-card:hover,
+.blog-card:hover{
+transform:translateY(-6px);
 }
+
+.project-card h3,
+.service-card h3,
+.skill-card h3,
+.blog-card h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+
+/* ---------- SOCIAL ---------- */
 
 .social{
 display:flex;
 flex-direction:column;
 gap:10px;
+align-items:center;
 }
 
+.social a{
+color:#38bdf8;
+font-weight:bold;
+}
+
+
+/* ---------- CONTACT FORM ---------- */
+
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-width:500px;
+margin:auto;
+}
+
+form input,
+form textarea{
+padding:10px;
+border:none;
+border-radius:6px;
+}
+
+form button{
+background:#38bdf8;
+border:none;
+padding:10px;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+
+/* ---------- FOOTER ---------- */
+
 footer{
+background:#020617;
+text-align:center;
+padding:20px;
+margin-top:40px;
 font-size:14px;
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (min-width:600px){
+
+.projects,
+.services,
+.skills,
+.blogs{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero h2{
+font-size:36px;
+}
+
+}
+
+
+/* ---------- LAPTOP ---------- */
+
+@media (min-width:900px){
+
+.projects,
+.services,
+.skills,
+.blogs{
+grid-template-columns:repeat(3,1fr);
+}
+
+nav{
+padding:20px 8%;
+}
+
+section{
+padding:80px 8%;
+}
+
+.hero h2{
+font-size:42px;
 }
 
 }
