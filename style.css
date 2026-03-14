@@ -221,3 +221,69 @@ nav ul li a.active {
   transition: transform 0.3s ease;
   transform-style: preserve-3d;
 }
+/* ---------- MOBILE RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 768px){
+
+nav{
+flex-direction:column;
+align-items:flex-start;
+padding:15px 5%;
+}
+
+nav ul{
+flex-direction:column;
+width:100%;
+margin-top:10px;
+}
+
+nav ul li{
+margin:10px 0;
+}
+
+.hero{
+padding-top:80px;
+}
+
+.hero h2{
+font-size:28px;
+}
+
+.hero p{
+font-size:16px;
+padding:0 10px;
+}
+
+section{
+padding:60px 6%;
+}
+
+.projects,
+.services,
+.skills,
+.blogs{
+grid-template-columns:1fr;
+}
+
+.project-card,
+.service-card,
+.skill-card,
+.blog-card{
+width:100%;
+}
+
+form{
+width:100%;
+}
+
+.social{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+footer{
+font-size:14px;
+}
+
+}
